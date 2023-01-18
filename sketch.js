@@ -72,7 +72,7 @@ function draw()
 	drawCircle(centerX, centerY, 220, 0, 360, false, secondInactiveColor, 'stroke', 30);
 	drawCircle(centerX, centerY, 220, startpoint, rad(radS) + startpoint, false, secondActiveColor, 'stroke', 30);
 
-	// Digital Timer
+	// AM or PM
 	drawCircle(centerX, centerY, 90, 0, 360, false, timerBg, 'fill', '50');
 	drawText(`${amOrPm}`, canvas.width / 2-15, canvas.height/2+15,'30px');
 
