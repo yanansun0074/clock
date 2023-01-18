@@ -20,6 +20,9 @@ const hourInactiveColor = '#c4d8e2',
 
 const timerBg = '#edca82';
 
+//set last_minute_tracker
+let start_min = 0;
+
 function setup()
 {
 	canvas.width = document.documentElement.clientWidth - 35;
@@ -74,7 +77,11 @@ function draw()
 	drawText(`${amOrPm}`, canvas.width / 2-15, canvas.height/2+15,'30px');
 
 	window.requestAnimationFrame(draw);
-    print(min)
+    //print every other minutes
+	if (min!=start_min){
+		print(min);
+		start_min = min;
+	}
 }
 
 setup();
