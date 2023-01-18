@@ -28,6 +28,10 @@ function setup()
 	canvas.width = document.documentElement.clientWidth - 35;
 	canvas.height = document.documentElement.clientHeight - 45;
 
+	let hr = hour();
+	let min = minute();
+	let sec = second();
+
 	window.requestAnimationFrame(draw);	
 }
 
@@ -36,9 +40,7 @@ function draw()
 	const centerX = canvas.width / 2,
 		centerY = canvas.height / 2;
 
-	let hr = hour();
-	let min = minute();
-	let sec = second();
+	
 	  
 	let date = new Date()
 	let ms = date.getMilliseconds();
